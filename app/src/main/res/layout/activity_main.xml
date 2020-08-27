@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_tempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:text="Tempo de aguardo, em segundos:"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/in_tempo"
+        android:layout_width="150dip"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_tempo"
+        android:layout_marginBottom="44dp"
+        android:layout_toRightOf="@id/tv_tempo"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tempo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_run"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_tempo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="164dp"
+        android:text="Run Async task"
+        app:layout_constraintBottom_toBottomOf="@+id/in_tempo"
+        app:layout_constraintEnd_toEndOf="@+id/in_tempo" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_run"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="136dp"
+        android:gravity="center_horizontal"
+        android:text="Resultado..."
+        android:textSize="7pt"
+        app:layout_constraintStart_toStartOf="@+id/btn_run"
+        app:layout_constraintTop_toBottomOf="@+id/btn_run" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
